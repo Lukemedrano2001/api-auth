@@ -39,7 +39,7 @@ public class ProdutoController {
 		produtoRepositorio.save(novoProduto);
 		
 		UriComponents uriComponents = uriBuilder.path("/api/produtos/{id}").buildAndExpand(novoProduto.getId());
-	    URI uri = uriComponents.toUri();
+	        URI uri = uriComponents.toUri();
 	    
 		return ResponseEntity.created(uri).build();
 	}
