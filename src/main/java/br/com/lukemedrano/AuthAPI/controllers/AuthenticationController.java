@@ -59,7 +59,7 @@ public class AuthenticationController {
 		usuarioRepositorio.save(novoUsuario);
 		
 		UriComponents uriComponents = uriBuilder.path("/api/produtos/{id}").buildAndExpand(novoUsuario.getId());
-        URI uri = uriComponents.toUri();
+                URI uri = uriComponents.toUri();
 		
 		return ResponseEntity.created(uri).build();
 	}
